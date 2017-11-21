@@ -6,12 +6,12 @@ echo "Please, type your salary: "
 read salary
 
 if [ $salary -lt $a ]; then 
-echo "Your tax is: 0%"
+echo "Your tax is: 0"
 
 elif [ $salary -ge $a -a $salary -le $b ]; then
-echo "Your tax is: 10%"
+let z=10*$salary/100; echo "Your tax is: $z"
 
 elif [ $salary -gt $b ]; then
-echo "Your tax is: 20%"
+let y=20*$salary/100;echo "Your tax is: $y"
 
 fi
