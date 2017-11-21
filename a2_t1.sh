@@ -12,6 +12,6 @@ elif [ $salary -ge $a -a $salary -le $b ]; then
 let z=10*$salary/100; echo "Your tax is: $z"
 
 elif [ $salary -gt $b ]; then
-let y=20*$salary/100;echo "Your tax is: $y"
+let y=20*$salary/100; echo "Your tax is: $y"
 
 fi
