@@ -4,11 +4,10 @@ do
   if [ -d $OUTPUT ]; then
       echo "Directory: $OUTPUT"
   elif [ -f $OUTPUT ]; then
-      IS_ELF=`file SOUTPUT | grep ELF`
-      if [ -z "$IS_ELF" ]; then      
-        echo " File:  $OUTPUT has `wc -l < $OUTPUT` lines"
-      else 
+      if [ `file --mime-encoding "$OUTPUT" | awk '{print $2}'` == "binary" ]; then      
         echo " File:  $OUTPUT"
+      else 
+        echo " File:  $OUTPUT has `wc -l < $OUTPUT` lines"
       fi
   fi
 done
