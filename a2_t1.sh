@@ -15,3 +15,4 @@ elif [ $salary -gt $b ]; then
 let y=20*$salary/100; echo "Your tax is: $y"
 
 fi
+#ups
